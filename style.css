@@ -5,7 +5,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ✅ ADDED (fix left shift) */
+/* ✅ FIX ADDED */
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -54,7 +54,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
 
-  /* ✅ ADDED (center fix) */
+  /* ✅ CENTER FIX */
   margin: 0 auto;
 }
 
@@ -314,10 +314,15 @@ body {
   }
 }
 
-/* ✅ ADDED ONLY THIS BLOCK FOR MOBILE CENTER */
+/* ✅ FINAL MOBILE FIX (ONLY CHANGE) */
 @media (max-width: 560px) {
+  body {
+    padding: 10px;
+  }
+
   .game-shell {
-    width: calc(100vw - 20px);
+    width: 100%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
