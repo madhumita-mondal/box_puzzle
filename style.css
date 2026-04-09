@@ -5,8 +5,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ✅ FIX ADDED */
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
@@ -40,22 +40,20 @@ body {
     radial-gradient(circle at top left, rgba(55, 213, 248, 0.18), transparent 18%),
     radial-gradient(circle at top right, rgba(55, 213, 248, 0.18), transparent 18%),
     linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 48%, var(--bg3) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  display: block;
+  padding: 0;
 }
 
 .game-shell {
-  width: min(100%, 920px);
+  width: 100%;
+  max-width: 920px;
+  min-height: 100vh;
+  margin: 0 auto;
   border-radius: 30px;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(4, 12, 60, 0.9), rgba(22, 56, 160, 0.88));
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-
-  /* ✅ CENTER FIX */
-  margin: 0 auto;
 }
 
 .top-banner {
@@ -314,16 +312,16 @@ body {
   }
 }
 
-/* ✅ FINAL MOBILE FIX (ONLY CHANGE) */
 @media (max-width: 560px) {
-  body {
-    padding: 10px;
-  }
-
   .game-shell {
     width: 100%;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  .board {
+    width: min(94vw, 520px);
   }
 }
